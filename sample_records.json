@@ -1,0 +1,15 @@
+[
+ {"source": "registry", "name": "Müller Robotik GmbH", "domain": "", "city": "München", "country": "DE"},
+ {"source": "jobs", "name": "Mueller Robotik", "domain": "https://www.mueller-robotik.de/karriere", "city": "Munich", "country": "DE"},
+ {"source": "social", "name": "MUELLER ROBOTIK", "domain": "mueller-robotik.com", "city": "", "country": ""},
+ {"source": "registry", "name": "Müller Logistik GmbH", "domain": "mueller-logistik.de", "city": "München", "country": "DE"},
+ {"source": "registry", "name": "Atlas Analytics, Inc.", "domain": "atlasanalytics.com", "city": "Austin", "country": "US"},
+ {"source": "jobs", "name": "Atlas Analytics", "domain": "", "city": "Austin", "country": "US"},
+ {"source": "social", "name": "Atlas Analytics SAS", "domain": "atlas-analytics-france.fr", "city": "Lyon", "country": "FR"},
+ {"source": "jobs", "name": "Atlas Analytcs", "domain": "", "city": "Lyon", "country": "FR"},
+ {"source": "social", "name": "Bergen Intl Tech Ltd", "domain": "https://linkhub.example/bergen", "city": "Leeds", "country": "GB"},
+ {"source": "registry", "name": "Bergen International Technologies Limited", "domain": "bergentech.co.uk", "city": "Leeds", "country": "GB"},
+ {"source": "social", "name": "Corvid Foods", "domain": "https://linkhub.example/corvid", "city": "Boston", "country": "US"},
+ {"source": "jobs", "name": "Halden Pharma", "domain": "https://linkhub.example/halden", "city": "Paris", "country": "FR"},
+ {"source": "registry", "name": "Dunmore Foods", "domain": "https://linkhub.example/dunmore", "city": "Bristol", "country": "GB"}
+]

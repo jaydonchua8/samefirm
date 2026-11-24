@@ -1,0 +1,500 @@
+{
+ "seeds": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "entities_per_seed": 2000,
+ "records": 20924,
+ "true_pairs": 14395,
+ "methods": [
+  {
+   "method": "exact name",
+   "precision": 0.8865,
+   "recall": 0.1389,
+   "f1": 0.2401,
+   "false_merge_pairs": 256,
+   "entities_exact": 0.3164
+  },
+  {
+   "method": "normalized name",
+   "precision": 0.8229,
+   "recall": 0.7294,
+   "f1": 0.7733,
+   "false_merge_pairs": 2259,
+   "entities_exact": 0.674
+  },
+  {
+   "method": "normalized name or domain",
+   "precision": 0.0528,
+   "recall": 0.8331,
+   "f1": 0.0993,
+   "false_merge_pairs": 215173,
+   "entities_exact": 0.7005
+  },
+  {
+   "method": "samefirm",
+   "precision": 0.9959,
+   "recall": 0.9647,
+   "f1": 0.9801,
+   "false_merge_pairs": 57,
+   "entities_exact": 0.9619
+  },
+  {
+   "method": "samefirm, no source rule",
+   "precision": 0.9569,
+   "recall": 0.9639,
+   "f1": 0.9604,
+   "false_merge_pairs": 625,
+   "entities_exact": 0.9341
+  }
+ ],
+ "blocking": {
+  "all_pairs": 43774653,
+  "candidate_pairs": 258593,
+  "reduction": 0.99409,
+  "true_pairs_kept": 0.9646
+ },
+ "seconds_per_seed": 2.48,
+ "records_per_second": 1685,
+ "missed_by_noise": {
+  "abbrev": {
+   "missed": 40,
+   "pairs": 1433,
+   "recall": 0.9721
+  },
+  "alias": {
+   "missed": 475,
+   "pairs": 1214,
+   "recall": 0.6087
+  },
+  "case": {
+   "missed": 70,
+   "pairs": 3813,
+   "recall": 0.9816
+  },
+  "clean": {
+   "missed": 0,
+   "pairs": 147,
+   "recall": 1.0
+  },
+  "no_city": {
+   "missed": 271,
+   "pairs": 7199,
+   "recall": 0.9624
+  },
+  "no_domain": {
+   "missed": 472,
+   "pairs": 7830,
+   "recall": 0.9397
+  },
+  "other_tld": {
+   "missed": 37,
+   "pairs": 2115,
+   "recall": 0.9825
+  },
+  "shared_host": {
+   "missed": 66,
+   "pairs": 1068,
+   "recall": 0.9382
+  },
+  "suffix": {
+   "missed": 291,
+   "pairs": 11195,
+   "recall": 0.974
+  },
+  "translit": {
+   "missed": 105,
+   "pairs": 4963,
+   "recall": 0.9788
+  },
+  "typo": {
+   "missed": 71,
+   "pairs": 2601,
+   "recall": 0.9727
+  }
+ },
+ "resolve": [
+  {
+   "split": "dev (tuned on this)",
+   "seeds": [
+    0
+   ],
+   "settings": {
+    "gen": {},
+    "sim": {}
+   },
+   "methods": {
+    "first match (baseline)": {
+     "accounts": 2000,
+     "in_index": 1707,
+     "matched": 1653,
+     "correct": 1355,
+     "wrong": 298,
+     "wrong_not_in_index": 121,
+     "review": 0,
+     "review_truth_shown": 0,
+     "truth_returned": 0,
+     "wrong_by_tag": {
+      "abbrev": 2,
+      "alias": 2,
+      "case": 48,
+      "no_city": 97,
+      "no_domain": 141,
+      "no_employees": 113,
+      "not_in_index": 121,
+      "other_tld": 25,
+      "shared_host": 24,
+      "suffix": 146,
+      "translit": 75,
+      "typo": 41,
+      "wrong_site": 41
+     },
+     "requests": 124,
+     "credits": 321.2,
+     "precision": 0.8197,
+     "recall": 0.7938,
+     "review_rate": 0.0
+    },
+    "resolver": {
+     "accounts": 2000,
+     "in_index": 1707,
+     "matched": 1196,
+     "correct": 1191,
+     "wrong": 5,
+     "wrong_not_in_index": 3,
+     "review": 292,
+     "review_truth_shown": 244,
+     "truth_returned": 1435,
+     "wrong_by_tag": {
+      "case": 1,
+      "no_city": 2,
+      "no_domain": 5,
+      "not_in_index": 3,
+      "suffix": 3
+     },
+     "requests": 130,
+     "credits": 303.2,
+     "duplicate_groups": 41,
+     "precision": 0.9958,
+     "recall": 0.6977,
+     "review_rate": 0.146
+    },
+    "resolver, margin 0": {
+     "accounts": 2000,
+     "in_index": 1707,
+     "matched": 1200,
+     "correct": 1193,
+     "wrong": 7,
+     "wrong_not_in_index": 3,
+     "review": 288,
+     "review_truth_shown": 240,
+     "truth_returned": 1435,
+     "wrong_by_tag": {
+      "case": 1,
+      "no_city": 2,
+      "no_domain": 7,
+      "not_in_index": 3,
+      "suffix": 4
+     },
+     "requests": 130,
+     "credits": 303.2,
+     "duplicate_groups": 43,
+     "precision": 0.9942,
+     "recall": 0.6989,
+     "review_rate": 0.144
+    },
+    "resolver, trust domain alone": {
+     "accounts": 2000,
+     "in_index": 1707,
+     "matched": 1281,
+     "correct": 1245,
+     "wrong": 36,
+     "wrong_not_in_index": 6,
+     "review": 207,
+     "review_truth_shown": 170,
+     "truth_returned": 1415,
+     "wrong_by_tag": {
+      "alias": 1,
+      "case": 6,
+      "no_city": 11,
+      "no_domain": 5,
+      "no_employees": 20,
+      "not_in_index": 6,
+      "suffix": 21,
+      "translit": 5,
+      "typo": 4,
+      "wrong_site": 31
+     },
+     "requests": 124,
+     "credits": 298.8,
+     "duplicate_groups": 62,
+     "precision": 0.9719,
+     "recall": 0.7293,
+     "review_rate": 0.1035
+    }
+   }
+  },
+  {
+   "split": "held out, same settings",
+   "seeds": [
+    1,
+    2,
+    3
+   ],
+   "settings": {
+    "gen": {},
+    "sim": {}
+   },
+   "methods": {
+    "first match (baseline)": {
+     "accounts": 6000,
+     "in_index": 5071,
+     "matched": 4965,
+     "correct": 4105,
+     "wrong": 860,
+     "wrong_not_in_index": 408,
+     "review": 0,
+     "review_truth_shown": 0,
+     "truth_returned": 0,
+     "wrong_by_tag": {
+      "abbrev": 10,
+      "alias": 3,
+      "case": 120,
+      "no_city": 236,
+      "no_domain": 393,
+      "no_employees": 363,
+      "not_in_index": 408,
+      "other_tld": 97,
+      "shared_host": 50,
+      "suffix": 385,
+      "translit": 235,
+      "typo": 111,
+      "wrong_site": 102
+     },
+     "requests": 372,
+     "credits": 968.6,
+     "precision": 0.8268,
+     "recall": 0.8095,
+     "review_rate": 0.0
+    },
+    "resolver": {
+     "accounts": 6000,
+     "in_index": 5071,
+     "matched": 3624,
+     "correct": 3611,
+     "wrong": 13,
+     "wrong_not_in_index": 5,
+     "review": 801,
+     "review_truth_shown": 654,
+     "truth_returned": 4266,
+     "wrong_by_tag": {
+      "case": 3,
+      "no_domain": 12,
+      "suffix": 11,
+      "no_city": 2,
+      "not_in_index": 5,
+      "shared_host": 1
+     },
+     "requests": 387,
+     "credits": 905.0,
+     "duplicate_groups": 132,
+     "precision": 0.9964,
+     "recall": 0.7121,
+     "review_rate": 0.1335
+    },
+    "resolver, margin 0": {
+     "accounts": 6000,
+     "in_index": 5071,
+     "matched": 3639,
+     "correct": 3618,
+     "wrong": 21,
+     "wrong_not_in_index": 5,
+     "review": 786,
+     "review_truth_shown": 639,
+     "truth_returned": 4266,
+     "wrong_by_tag": {
+      "case": 4,
+      "no_city": 5,
+      "no_domain": 20,
+      "suffix": 15,
+      "translit": 2,
+      "not_in_index": 5,
+      "shared_host": 1
+     },
+     "requests": 387,
+     "credits": 905.0,
+     "duplicate_groups": 137,
+     "precision": 0.9942,
+     "recall": 0.7135,
+     "review_rate": 0.131
+    },
+    "resolver, trust domain alone": {
+     "accounts": 6000,
+     "in_index": 5071,
+     "matched": 3843,
+     "correct": 3751,
+     "wrong": 92,
+     "wrong_not_in_index": 15,
+     "review": 582,
+     "review_truth_shown": 470,
+     "truth_returned": 4222,
+     "wrong_by_tag": {
+      "abbrev": 3,
+      "case": 17,
+      "no_city": 29,
+      "no_domain": 12,
+      "no_employees": 36,
+      "not_in_index": 15,
+      "suffix": 52,
+      "translit": 23,
+      "typo": 8,
+      "wrong_site": 79,
+      "shared_host": 1,
+      "alias": 2
+     },
+     "requests": 371,
+     "credits": 894.1999999999999,
+     "duplicate_groups": 177,
+     "precision": 0.9761,
+     "recall": 0.7397,
+     "review_rate": 0.097
+    }
+   }
+  },
+  {
+   "split": "held out, harder settings",
+   "seeds": [
+    4,
+    5
+   ],
+   "settings": {
+    "gen": {
+     "in_index": 0.7,
+     "lookalike_rate": 0.35,
+     "wrong_site": 0.06,
+     "emp_missing": 0.6
+    },
+    "sim": {
+     "rank_noise": 0.7,
+     "squash_rate": 0.1,
+     "alt_domain_rate": 0.3
+    }
+   },
+   "methods": {
+    "first match (baseline)": {
+     "accounts": 4000,
+     "in_index": 2753,
+     "matched": 2963,
+     "correct": 2115,
+     "wrong": 848,
+     "wrong_not_in_index": 530,
+     "review": 0,
+     "review_truth_shown": 0,
+     "truth_returned": 0,
+     "wrong_by_tag": {
+      "abbrev": 16,
+      "alias": 5,
+      "case": 118,
+      "no_city": 238,
+      "no_domain": 329,
+      "no_employees": 524,
+      "not_in_index": 530,
+      "other_tld": 81,
+      "shared_host": 42,
+      "suffix": 402,
+      "translit": 168,
+      "typo": 66,
+      "wrong_site": 148
+     },
+     "requests": 274,
+     "credits": 570.4,
+     "precision": 0.7138,
+     "recall": 0.7683,
+     "review_rate": 0.0
+    },
+    "resolver": {
+     "accounts": 4000,
+     "in_index": 2753,
+     "matched": 1752,
+     "correct": 1745,
+     "wrong": 7,
+     "wrong_not_in_index": 3,
+     "review": 805,
+     "review_truth_shown": 531,
+     "truth_returned": 2277,
+     "wrong_by_tag": {
+      "no_city": 2,
+      "no_domain": 7,
+      "not_in_index": 3,
+      "suffix": 5
+     },
+     "requests": 288,
+     "credits": 538.0,
+     "duplicate_groups": 63,
+     "precision": 0.996,
+     "recall": 0.6339,
+     "review_rate": 0.2013
+    },
+    "resolver, margin 0": {
+     "accounts": 4000,
+     "in_index": 2753,
+     "matched": 1763,
+     "correct": 1747,
+     "wrong": 16,
+     "wrong_not_in_index": 4,
+     "review": 794,
+     "review_truth_shown": 521,
+     "truth_returned": 2277,
+     "wrong_by_tag": {
+      "case": 2,
+      "no_city": 2,
+      "no_domain": 15,
+      "not_in_index": 4,
+      "shared_host": 1,
+      "suffix": 9,
+      "translit": 1
+     },
+     "requests": 288,
+     "credits": 538.0,
+     "duplicate_groups": 66,
+     "precision": 0.9909,
+     "recall": 0.6346,
+     "review_rate": 0.1985
+    },
+    "resolver, trust domain alone": {
+     "accounts": 4000,
+     "in_index": 2753,
+     "matched": 1942,
+     "correct": 1811,
+     "wrong": 131,
+     "wrong_not_in_index": 46,
+     "review": 615,
+     "review_truth_shown": 418,
+     "truth_returned": 2230,
+     "wrong_by_tag": {
+      "abbrev": 8,
+      "alias": 4,
+      "case": 15,
+      "no_city": 39,
+      "no_domain": 7,
+      "no_employees": 98,
+      "not_in_index": 46,
+      "suffix": 74,
+      "translit": 28,
+      "typo": 14,
+      "wrong_site": 124
+     },
+     "requests": 273,
+     "credits": 525.5999999999999,
+     "duplicate_groups": 118,
+     "precision": 0.9325,
+     "recall": 0.6578,
+     "review_rate": 0.1537
+    }
+   }
+  }
+ ]
+}
